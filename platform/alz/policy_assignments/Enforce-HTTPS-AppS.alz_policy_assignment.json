@@ -1,0 +1,26 @@
+{
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2021-06-01",
+  "name": "Enforce-HTTPS-AppS",
+  "dependsOn": [],
+  "location": "westeurope",
+  "properties": {
+    "description": "Use of HTTPS ensures server/service authentication and protects data in transit from network layer eavesdropping attacks.",
+    "displayName": "App Service apps should only be accessible over HTTPS",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a4af4a39-4135-47fb-b175-47fbdf85311d",
+    "definitionVersion": "4.0.0",
+    "enforcementMode": "DoNotEnforce",
+    "nonComplianceMessages": [
+      {
+        "message": "Ensure that App Service apps are configured to allow only HTTPS traffic."
+      }
+    ],
+    "parameters": {
+      "effect": {
+        "value": "Audit"
+      }
+    },
+    "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
+    "notScopes": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2021-06-01",
+  "name": "Enable-LogicApp-Logs",
+  "dependsOn": [],
+  "location": "westeurope",
+  "properties": {
+    "description": "Audit enabling of resource logs in Logic Apps for investigation and security purposes.",
+    "displayName": "Resource logs in Logic Apps should be enabled",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/34f95f76-5386-4de7-b824-0d8478470c9d",
+    "definitionVersion": "5.1.0",
+    "enforcementMode": "DoNotEnforce",
+    "nonComplianceMessages": [
+      {
+        "message": "Ensure that resource logs are enabled for Logic Apps."
+      }
+    ],
+    "parameters": {
+      "effect": {
+        "value": "AuditIfNotExists"
+      },
+      "requiredRetentionDays": {
+        "value": "365"
+      }
+    },
+    "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
+    "notScopes": []
+  }
+}

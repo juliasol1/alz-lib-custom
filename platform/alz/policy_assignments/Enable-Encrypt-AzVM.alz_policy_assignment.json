@@ -1,0 +1,26 @@
+{
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2021-06-01",
+  "name": "Enable-Encrypt-AzVM",
+  "dependsOn": [],
+  "location": "westeurope",
+  "properties": {
+    "description": "Ensure that Windows virtual machines are encrypted using Azure Disk Encryption or EncryptionAtHost.",
+    "displayName": "Windows virtual machines should enable Azure Disk Encryption or EncryptionAtHost.",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3dc5edcd-002d-444c-b216-e123bbfa37c0",
+    "definitionVersion": "1.1.1",
+    "enforcementMode": "DoNotEnforce",
+    "nonComplianceMessages": [
+      {
+        "message": "Ensure Azure Disk Encryption or EncryptionAtHost is enabled for Windows virtual machines."
+      }
+    ],
+    "parameters": {
+      "effect": {
+        "value": "AuditIfNotExists"
+      }
+    },
+    "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
+    "notScopes": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2024-04-01",
+  "name": "Audit-Storage-PrivLink",
+  "dependsOn": [],
+  "location": "westeurope",
+  "properties": {
+    "description": "Assign the audit policy to ensure Storage Accounts use Private Link.",
+    "displayName": "Storage accounts should use private link",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6edd7eda-6dd8-40f7-810d-67160c639cd9",
+    "definitionVersion": "2.0.0",
+    "enforcementMode": "DoNotEnforce",
+    "nonComplianceMessages": [
+      {
+        "message": "Storage accounts should use Private Link for secure access."
+      }
+    ],
+    "parameters": {
+      "effect": {
+        "value": "AuditIfNotExists"
+      }
+    },
+    "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
+    "notScopes": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2021-06-01",
+  "name": "Audit-ML-ResourceLogs",
+  "dependsOn": [],
+  "location": "westeurope",
+  "properties": {
+    "description": "Resource logs enable recreating activity trails to use for investigation purposes when a security incident occurs or when your network is compromised.",
+    "displayName": "Resource logs in Azure Machine Learning Workspaces should be enabled",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/afe0c3be-ba3b-4544-ba52-0c99672a8ad6",
+    "definitionVersion": "1.0.1",
+    "enforcementMode": "DoNotEnforce",
+    "nonComplianceMessages": [
+      {
+        "message": "Resource logs in Azure Machine Learning Workspaces should be enabled to support incident investigation."
+      }
+    ],
+    "parameters": {
+      "effect": {
+        "value": "AuditIfNotExists"
+      },
+      "requiredRetentionDays": {
+        "value": "365"
+      }
+    },
+    "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
+    "notScopes": []
+  }
+}

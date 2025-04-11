@@ -1,0 +1,26 @@
+{
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2021-06-01",
+  "name": "Enable-AppSer-MI",
+  "dependsOn": [],
+  "location": "westeurope",
+  "properties": {
+    "description": "Ensure App Service apps use a managed identity for enhanced authentication security.",
+    "displayName": "App Service apps should use managed identity",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2b9ad585-36bc-4615-b300-fd4435808332",
+    "definitionVersion": "3.0.0",
+    "enforcementMode": "DoNotEnforce",
+    "nonComplianceMessages": [
+      {
+        "message": "Ensure App Service apps use managed identity for enhanced authentication security."
+      }
+    ],
+    "parameters": {
+      "effect": {
+        "value": "AuditIfNotExists"
+      }
+    },
+    "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
+    "notScopes": []
+  }
+}

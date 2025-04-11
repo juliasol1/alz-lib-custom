@@ -1,0 +1,26 @@
+{
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2021-06-01",
+  "name": "Audit-GuestAcc-WA",
+  "dependsOn": [],
+  "location": "westeurope",
+  "properties": {
+    "description": "External accounts with write privileges should be removed from your subscription in order to prevent unmonitored access.",
+    "displayName": "Guest accounts with write permissions on Azure resources should be removed",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/94e1c2ac-cbbe-4cac-a2b5-389c812dee87",
+    "definitionVersion": "1.0.0",
+    "enforcementMode": "DoNotEnforce",
+    "nonComplianceMessages": [
+      {
+        "message": "Guest accounts with write permissions should be removed to prevent unmonitored access."
+      }
+    ],
+    "parameters": {
+      "effect": {
+        "value": "AuditIfNotExists"
+      }
+    },
+    "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
+    "notScopes": []
+  }
+}

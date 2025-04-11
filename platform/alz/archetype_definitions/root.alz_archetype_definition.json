@@ -1,0 +1,39 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Azure/Azure-Landing-Zones-Library/main/schemas/archetype_definition.json",
+  "name": "root",
+  "policy_assignments": [ 
+    "Audit-AppGW-WAF",
+    "Audit-ResourceRGLocation",
+    "Deny-UnmanagedDisk",
+    "Audit-Storage-Key-Access",
+    "Deny-Locations",
+    "Audit-SQL-Public-NA",
+    "Audit-KV-RBAC",
+    "Deny-Public-Endpoints",
+    "Audit-Storage-PrivLink",
+    "Audit-Storage-VNetRules",
+    "Audit-NetworkWatcher",
+    "Audit-GuestAcc-WA",
+    "Audit-ML-ResourceLogs",
+    "Audit-HTTPS-FnApp",
+    "Audit-AutoVar-Encrypt",
+    "Audit-KV-PrivateLink",
+    "Audit-KV-DelProtec",
+    "Audit-K8S-Aut-IPs",
+    "Audit-K8S-RBAC",
+    "Enable-Az-Backup-VMs",
+    "Restrict-NA-ContR",
+    "Enforce-HTTPS-AppS",
+    "Enforce-PrivEndp-AzSQL",
+    "Enable-Encrypt-AzVM",
+    "Enable-ServBus-ResLogs",
+    "Enable-FunctionApp-MI",
+    "Enable-AppSer-MI",
+    "Enable-LogicApp-Logs"
+  ],
+  "policy_definitions": [],
+  "policy_set_definitions": [
+    "Deny-PublicPaaSEndpoints"
+  ],
+  "role_definitions": []
+}

@@ -1,0 +1,26 @@
+{
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2021-06-01",
+  "name": "Audit-AutoVar-Encrypt",
+  "dependsOn": [],
+  "location": "westeurope",
+  "properties": {
+    "description": "It is important to enable encryption of Automation account variable assets when storing sensitive data",
+    "displayName": "Automation account variables should be encrypted",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3657f5a0-770e-44a3-b44e-9431ba1e9735",
+    "definitionVersion": "1.1.0",
+    "enforcementMode": "DoNotEnforce",
+    "nonComplianceMessages": [
+      {
+        "message": "Automation account variables should be encrypted to protect sensitive data."
+      }
+    ],
+    "parameters": {
+      "effect": {
+        "value": "Audit"
+      }
+    },
+    "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
+    "notScopes": []
+  }
+}

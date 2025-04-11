@@ -1,0 +1,26 @@
+{
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2021-06-01",
+  "name": "Enable-FunctionApp-MI",
+  "dependsOn": [],
+  "location": "westeurope",
+  "properties": {
+    "description": "Ensure Function Apps use a managed identity for enhanced authentication security.",
+    "displayName": "Function apps should use managed identity",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0da106f2-4ca3-48e8-bc85-c638fe6aea8f",
+    "definitionVersion": "3.0.0",
+    "enforcementMode": "DoNotEnforce",
+    "nonComplianceMessages": [
+      {
+        "message": "Ensure Function Apps use managed identity for enhanced authentication security."
+      }
+    ],
+    "parameters": {
+      "effect": {
+        "value": "AuditIfNotExists"
+      }
+    },
+    "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
+    "notScopes": []
+  }
+}

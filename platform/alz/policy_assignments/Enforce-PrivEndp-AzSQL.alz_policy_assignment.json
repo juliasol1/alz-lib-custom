@@ -1,0 +1,26 @@
+{
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2021-06-01",
+  "name": "Enforce-PrivEndp-AzSQL",
+  "dependsOn": [],
+  "location": "westeurope",
+  "properties": {
+    "description": "Private endpoint connections enforce secure communication by enabling private connectivity to Azure SQL Database.",
+    "displayName": "Private endpoint connections on Azure SQL Database should be enabled",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7698e800-9299-47a6-b3b6-5a0fee576eed",
+    "definitionVersion": "1.1.0",
+    "enforcementMode": "DoNotEnforce",
+    "nonComplianceMessages": [
+      {
+        "message": "Ensure that private endpoint connections are enabled for secure communication with Azure SQL Database."
+      }
+    ],
+    "parameters": {
+      "effect": {
+        "value": "Audit"
+      }
+    },
+    "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
+    "notScopes": []
+  }
+}

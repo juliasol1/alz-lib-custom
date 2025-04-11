@@ -1,0 +1,29 @@
+{
+  "type": "Microsoft.Authorization/policyAssignments",
+  "apiVersion": "2021-06-01",
+  "name": "Enable-ServBus-ResLogs",
+  "dependsOn": [],
+  "location": "westeurope",
+  "properties": {
+    "description": "Ensure resource logs are enabled in Service Bus for activity trail and security investigations.",
+    "displayName": "Resource logs in Service Bus should be enabled",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f8d36e2f-389b-4ee4-898d-21aeb69a0f45",
+    "definitionVersion": "5.0.0",
+    "enforcementMode": "DoNotEnforce",
+    "nonComplianceMessages": [
+      {
+        "message": "Ensure resource logs are enabled with the required retention period for Service Bus."
+      }
+    ],
+    "parameters": {
+      "effect": {
+        "value": "AuditIfNotExists"
+      },
+      "requiredRetentionDays": {
+        "value": "365"
+      }
+    },
+    "scope": "/providers/Microsoft.Management/managementGroups/placeholder",
+    "notScopes": []
+  }
+}
